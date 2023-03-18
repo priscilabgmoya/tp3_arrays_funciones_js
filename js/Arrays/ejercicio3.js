@@ -19,7 +19,7 @@ for (let i = 0; i < 50; i++) {
   let dado_2 = lazarDados();
   let sumaDados = dado_1 + dado_2;
   agregarArraySuma(sumaDados);
-  // sumaDeDados.push(sumaDados);
+
 }
 
 function agregarArraySuma(resultado) {
@@ -62,7 +62,6 @@ function agregarArraySuma(resultado) {
       break;
   }
 }
-document.write(sumaDeDados)
 document.write("<table border>");
 document.write("<thead>");
 document.write("<tr>");
