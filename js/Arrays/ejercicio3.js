@@ -5,16 +5,16 @@
  * el número de apariciones de dicha suma, repitiendo 50 veces esta operación.
  */
 
-let sumaDeDados = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+let sumaDeDados = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 function lazarDados() {
   let random = Math.random();
   let superior = 6;
   let inferior = 1;
-  let resultado = Math.floor(random * (superior - inferior));
+  let resultado = Math.floor(random * (superior - inferior)+ inferior);
   return resultado;
 }
 
-for (let i = 0; i < 50; i++) {
+for (let i = 0; i <= 50; i++) {
   let dado_1 = lazarDados();
   let dado_2 = lazarDados();
   let sumaDados = dado_1 + dado_2;
@@ -23,42 +23,40 @@ for (let i = 0; i < 50; i++) {
 }
 
 function agregarArraySuma(resultado) {
+
   switch (resultado) {
-    case 1:
+    case 2:
       sumaDeDados[0]++;
       break;
-    case 2:
+    case 3:
       sumaDeDados[1]++;
       break;
-    case 3:
+    case 4:
       sumaDeDados[2]++;
       break;
-    case 4:
+    case 5:
       sumaDeDados[3]++;
       break;
-    case 5:
+    case 6:
       sumaDeDados[4]++;
       break;
-    case 6:
+    case 7:
       sumaDeDados[5]++;
       break;
-    case 7:
+    case 8:
       sumaDeDados[6]++;
       break;
-    case 8:
+    case 9:
       sumaDeDados[7]++;
       break;
-    case 9:
+    case 10:
       sumaDeDados[8]++;
       break;
-    case 10:
+    case 11:
       sumaDeDados[9]++;
       break;
-    case 11:
-      sumaDeDados[10]++;
-      break;
     default:
-      sumaDeDados[11]++;
+      sumaDeDados[10]++;
       break;
   }
 }
@@ -70,9 +68,9 @@ document.write("<th>Cantidad de veces Que Aparece</th>");
 document.write("</tr>");
 document.write("</thead>");
 document.write("<tbody>");
-for (let i = 0; i < sumaDeDados.length; i++) {
-  const element = sumaDeDados[i];
-  if (element != 0) {
+for (let i = 1; i < sumaDeDados.length; i++) {
+  const element = sumaDeDados[i-1];
+  if (element !=0 ) {
     document.write("<tr>");
     document.write(`<td>${i+1}</td>`);
     document.write(`<td>${element}</td>`);
